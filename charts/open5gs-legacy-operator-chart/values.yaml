@@ -1,0 +1,21 @@
+controllerManager:
+  manager:
+    args:
+    - --leader-elect
+    - --leader-election-id=open5gs-operator
+    containerSecurityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+    image:
+      repository: gradiant/open5gs-legacy-operator
+      tag: 0.1.0
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+  replicas: 1
+  serviceAccount:
+    annotations: {}
+kubernetesClusterDomain: cluster.local

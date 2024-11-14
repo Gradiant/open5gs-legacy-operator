@@ -1,0 +1,27 @@
+# permissions for end users to view open5gsusers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: open5gsuser-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: open5gs-operator
+    app.kubernetes.io/part-of: open5gs-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: open5gsuser-viewer-role
+rules:
+- apiGroups:
+  - net.gradiant.org
+  resources:
+  - open5gsusers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - net.gradiant.org
+  resources:
+  - open5gsusers/status
+  verbs:
+  - get

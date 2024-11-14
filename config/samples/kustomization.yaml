@@ -1,0 +1,7 @@
+## Append samples of your project ##
+resources:
+- net_v1_open5gs.yaml
+- net_v1_open5gs-2.yaml
+- net_v1_open5gsuser.yaml
+- net_v1_open5gsuser-2.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

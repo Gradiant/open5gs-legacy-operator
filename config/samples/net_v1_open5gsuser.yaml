@@ -1,0 +1,14 @@
+apiVersion: net.gradiant.org/v1
+kind: Open5GSUser
+metadata:
+  name: open5gsuser-1
+spec:
+  imsi: "999700000000001"
+  key: "465B5CE8B199B49FAA5F0A2EE238A6BC"
+  opc: "E8ED289DEBA952E4283B54E88E6183CA"
+  sd: "111111"
+  sst: "1"
+  apn: "internet"
+  open5gs: 
+    name: "open5gs"
+    namespace: "default"

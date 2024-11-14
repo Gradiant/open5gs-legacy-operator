@@ -1,0 +1,31 @@
+# permissions for end users to edit open5gs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: open5gs-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: open5gs-operator
+    app.kubernetes.io/part-of: open5gs-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: open5gs-editor-role
+rules:
+- apiGroups:
+  - net.gradiant.org
+  resources:
+  - open5gs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - net.gradiant.org
+  resources:
+  - open5gs/status
+  verbs:
+  - get

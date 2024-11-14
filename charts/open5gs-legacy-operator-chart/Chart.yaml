@@ -1,0 +1,8 @@
+apiVersion: v2
+name: open5gs-legacy-operator-chart
+description: A Helm chart for Kubernetes Open5GS Operator
+
+type: application
+
+version: 0.1.0
+appVersion: "0.1.0"

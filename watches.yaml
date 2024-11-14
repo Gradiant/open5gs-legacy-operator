@@ -1,0 +1,6 @@
+# Use the 'create api' subcommand to add watches to this file.
+- group: net.gradiant.org
+  version: v1
+  kind: Open5GS
+  chart: helm-charts/open5gs
+#+kubebuilder:scaffold:watch
